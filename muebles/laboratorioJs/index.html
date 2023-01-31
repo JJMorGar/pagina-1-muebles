@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>laboratorio del DOM</title>
+  <body>
+    <style></style>
+
+    <form action="">
+      <input type="button" value="cambio de tamaño" onclick="zooom()" />
+    </form>
+
+    <img id="thumb" class="thumb" src="" alt="" />
+
+
+    <div id="uno" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+    <div id="unos" class="nodo"></div>
+
+    <script>
+      
+      // const zooom = () => {
+      //   let thumb = document.getElementById("thumb");
+      //   thumb.setAttribute("class", "thumb grande");
+      //   thumb.className = "thumb grande";
+      //   thumb.id = "a";
+      //   thumb.src = "324";
+      // };
+
+      // const nodeList = document.querySelectorAll(".nodo")
+      // console.log(nodeList);
+      // const arrayList = Array.from(nodeList)
+      // const idArray = arrayList.map(node => node.id);
+      // console.log(idArray);
+
+      const parent = document.querySelector("#uno.nodo")
+      const textnode = document.createTextNode("holaaa")
+      const h1node = document.createElement("h1")
+
+      h1node.appendChild(textnode)
+      parent.appendChild(h1node)
+
+      const obj2 = {
+        apellido1 : "asdas"
+      }
+
+      const map = new Map()
+      map.set(obj2, 'Luke')
+      map.set('lastName', 'Skywalker')
+      map.set('occupation', 'Jedi Knight')
+      console.log(map);
+
+      const obj = {
+        obj2: "carlos",
+        apellido : "torres",
+        ocupacion: "vago"
+      }
+      
+      console.log(obj);
+    </script>
+  </body>
+</html>
